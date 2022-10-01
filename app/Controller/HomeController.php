@@ -2,6 +2,8 @@
 
 namespace Matt\PhpMvc\Controller;
 
+use Matt\PhpMvc\App\View;
+
 class HomeController
 {
     function index():void
@@ -11,7 +13,7 @@ class HomeController
             "content"   => "Selamat belajar PHP MVC dari Programmer Zaman Now"
         ];
 
-        echo "HomeController.index()";
+        View::render('Home/index', $model);
     }
 
     function hello():void
